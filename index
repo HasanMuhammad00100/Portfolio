@@ -43,6 +43,7 @@
             });
         }
     });
+ 
 </script>
 <nav class="navbar">
     <div class="logo">Hasan.</div>
