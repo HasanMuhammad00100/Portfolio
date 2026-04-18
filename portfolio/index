@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasan Muhammad | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="profile.jpg" alt="Hasan Muhammad" class="profile">
+
+        <h1>Hasan Muhammad</h1>
+        <h2>Junior Web Developer</h2>
+
+        <p class="bio">
+            Aspiring Web Applications Developer based in Windsor, Ontario with experience in Java, HTML, and CSS. 
+            Strong in problem-solving and teamwork, demonstrated through projects like the Timely Tasks Scheduling App 
+            and Angular CX Management System. Passionate about building real-world applications and growing technical skills.
+        </p>
+
+        <div class="buttons">
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="about.html">About Me</a>
+            <a href="https://github.com/HasanMuhammad00100" target="_blank">My GitHub</a>
+        </div>
+    </div>
+    <script>
+    // Fade out before navigating
+    document.querySelectorAll("a").forEach(link => {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let target = this.href;
+
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 400);
+            });
+        }
+    });
+</script>
+<nav class="navbar">
+    <div class="logo">Hasan.</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://github.com/HasanMuhammad00100" target="_blank">GitHub</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

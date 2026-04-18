@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0f;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #7f5af0;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #7f5af0;
+}
+
+/* Profile Image */
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #7f5af0;
+    box-shadow: 0 0 15px #a78bfa;
+}
+
+/* Headings */
+h1 {
+    margin: 15px 0 5px;
+    color: #a78bfa;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 300;
+    color: #7f5af0;
+}
+
+/* Bio */
+.bio {
+    margin: 20px 0;
+    max-width: 400px;
+}
+
+/* Buttons */
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #eaeaea;
+    border: 1px solid #7f5af0;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #7f5af0;
+    box-shadow: 0 0 10px #a78bfa;
+}
+.project {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #7f5af0;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .bio {
+        max-width: 100%;
+    }
+}
+/* Smooth transitions globally */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Container hover glow */
+.container:hover {
+    box-shadow: 0 0 40px #a78bfa;
+}
+
+/* Profile image hover */
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #a78bfa;
+}
+
+/* Buttons upgrade */
+.buttons a {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button hover animation */
+.buttons a:hover {
+    transform: translateY(-3px);
+    background-color: #7f5af0;
+    box-shadow: 0 5px 20px #a78bfa;
+}
+
+/* Project cards animation */
+.project {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #7f5af0;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(127, 90, 240, 0.5);
+}
+/* Page fade animation */
+body {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in forwards;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade out */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #7f5af0;
+}
+
+/* Logo */
+.logo {
+    color: #a78bfa;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eaeaea;
+    position: relative;
+}
+
+/* Underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #7f5af0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Push content down so navbar doesn't overlap */
+body {
+    padding-top: 80px;
+}
