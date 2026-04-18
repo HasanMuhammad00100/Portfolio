@@ -124,9 +124,3 @@ h2 {
         max-width: 100%;
     }
 }
-img {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    max-width: 300px;
-}
